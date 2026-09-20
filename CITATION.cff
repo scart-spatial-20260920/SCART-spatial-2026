@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+title: "SCART-spatial-2026: analysis code for spatially fractionated radiotherapy spatial transcriptomics"
+abstract: >-
+  Analysis code reproducing the figures and tables of a spatial transcriptomic
+  study of spatially fractionated radiotherapy (SCART) versus uniform-dose SBRT
+  in murine H22 hepatocellular carcinoma, profiled with SeekGene SeekSpace.
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/<ORG>/SCART-spatial-2026"
+doi: 10.5281/zenodo.XXXXXXX
+keywords:
+  - spatially fractionated radiotherapy
+  - SFRT
+  - SCART
+  - spatial transcriptomics
+  - tumour immune microenvironment
+  - hepatocellular carcinoma
+authors:
+  # TODO replace with the full author list, in manuscript order
+  - given-names: Weisi
+    family-names: Yan
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+preferred-citation:
+  type: article
+  title: "TODO - final manuscript title"
+  year: 2026
+  journal: "TODO"
+  doi: "TODO"
+  authors:
+    - given-names: Weisi
+      family-names: Yan

@@ -1,0 +1,58 @@
+# Conda environment for the SCART spatial transcriptomics analysis.
+#
+# Versions below are the ones actually present on the machine that produced the
+# figures and tables in the manuscript (captured 2026-08-13), not aspirational
+# minimums.  Pin them exactly when reproducing.
+#
+#   conda env create -f environment.yml
+#   conda activate scart-spatial
+#
+# NOTE Harmony integration (phase2 step 3) used harmonypy, which is NOT currently
+# installed on the analysis machine - integration was run at an earlier date and
+# the embedding is carried in the h5ad as obsm["X_harmony"].  If you need to
+# re-run integration from scratch, install harmonypy and RECORD THE VERSION here
+# before doing so.
+name: scart-spatial
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12.10
+
+  # --- core numerics -----------------------------------------------------
+  - numpy=2.4.3
+  - pandas=2.3.3
+  - scipy=1.17.1
+  - numba=0.65.0
+  - networkx=3.6.1
+  - pyarrow=23.0.1
+
+  # --- single-cell / spatial --------------------------------------------
+  - scanpy=1.12
+  - anndata=0.12.10
+  - squidpy=1.8.1
+  - h5py=3.16.0
+  - python-igraph=1.0.0
+  - leidenalg=0.11.0
+
+  # --- statistics --------------------------------------------------------
+  - scikit-learn=1.8.0
+  - statsmodels=0.14.6
+
+  # --- plotting ----------------------------------------------------------
+  - matplotlib-base=3.10.8
+  - seaborn=0.13.2
+  - pillow=12.1.1
+
+  # --- io / misc ---------------------------------------------------------
+  - openpyxl=3.1.5
+  - tqdm=4.67.3
+  - natsort=8.4.0
+
+  - pip
+  - pip:
+      - decoupler==2.1.5
+      - adjustText==1.3.0
+      - session-info==1.0.1
+      # uncomment only if re-running Harmony integration, and pin the version:
+      # - harmonypy==<version you used>
